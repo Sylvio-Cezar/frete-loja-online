@@ -1,14 +1,17 @@
 package main;
 
 import models.Produto;
-import models.Tamanho;
+import models.TipoEnvio;
 import services.CalculadoraFrete;
 
 public class Principal {
     public static void main(String[] args) {
-        Produto produto1 = new Produto("Camiseta", 0.2, 89.90, Tamanho.PEQUENO);
-        Produto produto2 = new Produto("Notebook", 2.0, 3499.90, Tamanho.MEDIO);
-        Produto produto3 = new Produto("Geladeira", 60.0, 2616.35, Tamanho.GRANDE);
+        Produto produto1 = new Produto("Camiseta", 0.2, 89.90,
+                0.8, 0.4, 0.1, TipoEnvio.TAMANHO);
+        Produto produto2 = new Produto("Notebook", 2.0, 3549.90,
+                0.3, 0.4, 0.2, TipoEnvio.PRECO);
+        Produto produto3 = new Produto("Geladeira", 60.0, 2616.35,
+                1.70, 0.7, 0.4, TipoEnvio.PESO);
 
         CalculadoraFrete calculadoraFrete = new CalculadoraFrete();
 
